@@ -52,234 +52,268 @@
         max-width: 100% !important;
     }
 }
-    /* Ensure MREN203 project images keep aspect ratio and don't distort */
-    .project img[src*="MREN203"] {
-        width: 32% !important;
-        max-width: 320px !important;
-        height: auto !important;
-        object-fit: contain !important;
-    }
-    .onshape-fallback {
-        margin-top: 0.7rem;
-        font-size: 1rem;
-        color: #444;
-    }
-    .onshape-fallback a {
-        color: #1976d2;
-        text-decoration: underline;
-    }
-    .onshape-embed {
-        margin-top: 1rem;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 2px 12px rgba(25,118,210,0.08);
-    }
-    .project h3 {
-        margin-top: 0;
-        color: #000000;
-    }
-    body {
-        font-family: 'Roboto', Arial, sans-serif;
-        margin: 0;
-        padding: 0; /* page horizontal padding moved into .page-inner */
-        background: #f4f4f4;
-        color: #000; /* make default text black */
-    }
 
-    .page-inner {
-        max-width: 900px; /* content inset — controls how far inward the page goes */
-        margin: 0 auto;
-        padding: 0 24px; /* inner gutter so text doesn't touch the content edge */
-    }
-    header.no-bar {
-        background: none;
-        color: #222;
-        padding: 2rem 0 0.5rem 0;
-        text-align: left;
-        box-shadow: none;
-    }
-    .header-content {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 2rem;
-        width: 100%;
-        padding: 1.25rem 0; /* vertical padding only, horizontal spacing controlled by body padding */
-    }
-    .site-title h1 {
-        margin: 0;
-        font-size: 34px;
-        letter-spacing: -0.5px;
-    }
-    .site-title .subtitle {
-        margin: 0.25rem 0 0 0;
-        font-size: 0.95rem;
-        color: #000;
-    }
-    .top-nav {
-        display: flex;
-        gap: 1.25rem;
-        align-items: center;
-    }
-    .top-nav a {
-        color: #1976d2; /* keep nav links blue as hyperlinks */
-        text-decoration: none;
-        text-transform: lowercase;
-        font-size: 0.95rem;
-        opacity: 0.95;
-    }
-    .top-nav a:hover { text-decoration: underline; }
-    .page-sep {
-        border: 0;
-        height: 1px;
-        background: #e6e6e6;
-        margin: 0.5rem 0 1.25rem 0; /* fill the .page-inner width */
-        width: 100%;
-    }
+/* Ensure MREN203 project images keep aspect ratio and don't distort */
+.project img[src*="MREN203"] {
+    width: 32% !important;
+    max-width: 320px !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
 
-    /* Explicit section rule fallback (used where pseudo-elements may be blocked or cached) */
-    .section-hr {
-        border: 0;
-        height: 1px;
-        background: #e6e6e;
-        margin: 0.5rem 0 1rem 0;
-        width: 100%;
-    }
-    .headshot {
-        width: 120px;
-        height: 120px;
-        object-fit: cover;
-        border-radius: 8px; /* square with small rounded corners */
-        border: 3px solid #e0e0e0;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
+.onshape-fallback {
+    margin-top: 0.7rem;
+    font-size: 1rem;
+    color: #444;
+}
 
-    /* About two-column layout */
-    .about-grid {
-        display: grid;
-        grid-template-columns: 1fr 420px;
-        gap: 48px;
-        align-items: center;
-        width: 100%;
-        margin: 0 0 2rem 0;
-    }
-    .about-text h2 {
-        font-size: 40px;
-        margin: 0 0 0.6rem 0;
-    }
-    .about-text p {
-        font-size: 18px;
-        line-height: 1.7;
-        color: inherit;
-        max-width: 640px;
-    }
-    .about-photo { text-align: right; }
-    .about-headshot {
-        /* responsive square: scale to container but never exceed 360px */
-        width: 100%;
-        max-width: 360px;
-        aspect-ratio: 1 / 1;
-        object-fit: cover;
-        border-radius: 6px;
-        border: 0;
-        display: block;
-    }
-    .subtitle {
-        font-size: 1.1rem;
-        color: #555;
-        margin-bottom: 0.5rem;
-    }
-    nav {
-        margin-top: 0.5rem;
-    }
-    nav a {
-        color: #1976d2;
-        margin: 0 0.7rem;
-        text-decoration: none;
-        font-weight: 700;
-        transition: color 0.2s;
-    }
-    nav a:hover {
-        color: #1565c0;
-        text-decoration: underline;
-    }
-    main {
-        width: 100%;
-        margin: 1.25rem 0 2rem 0;
-        background: transparent; /* removed white card */
-        padding: 0;
-        border-radius: 0;
-        box-shadow: none;
-    }
-    section {
-        margin-bottom: 2.5rem;
-        padding: 0; /* rely on body padding for left/right margins */
-    }
-    h1 {
-        margin-bottom: 0.3rem;
-    }
-    h2 {
-        color: #000;
-        margin-bottom: 0.7rem;
-    }
+.onshape-fallback a {
+    color: #1976d2;
+    text-decoration: underline;
+}
 
-    /* Thin rule under specific section headings to match header separator */
-    #projects h2::after,
-    #skills h2::after,
-    #achievements h2::after,
-    #contact h2::after {
-        content: "";
-        display: block;
-        height: 1px;
-        background: #e6e6e6;
-        margin-top: 0.5rem;
-        margin-bottom: 1rem;
-        width: 100%;
-    }
-    .exp-list {
-        list-style: none;
-        padding: 0;
-    }
-    .exp-list > li {
-        margin-bottom: 1.5rem;
-        background: #f7faff;
-        border-radius: 8px;
-        padding: 1rem 1.2rem;
-        box-shadow: 0 1px 4px rgba(25,118,210,0.04);
-    }
-    .exp-list strong {
-        color: #1565c0;
-        font-size: 1.08rem;
-    }
-    .exp-list ul {
-        margin: 0.5rem 0 0 1.2rem;
-    }
-    .skills-list {
-        list-style: none;
-        padding: 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0.7rem 2rem;
-    }
-    .skills-list li {
-        background: #f4f4f4;
-        border-radius: 6px;
-        padding: 0.7rem 1rem;
-        font-size: 1rem;
-    }
-    @media (max-width: 900px) {
-        .about-grid { grid-template-columns: 1fr; }
-        .about-photo { text-align: center; }
-        .about-headshot { width: 320px; height: 320px; margin: 0 auto; }
-        .top-nav { gap: 0.8rem; }
-    }
+.onshape-embed {
+    margin-top: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(25,118,210,0.08);
+}
 
-    @media (max-width: 700px) {
-        .header-content { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
-        main { padding: 0; }
-        .skills-list { grid-template-columns: 1fr; }
-        .about-headshot { width: 260px; height: 260px; }
-    }
+.project h3 {
+    margin-top: 0;
+    color: #000000;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0; /* page horizontal padding moved into .page-inner */
+    background: #f4f4f4;
+    color: #000; /* make default text black */
+}
+
+.page-inner {
+    max-width: 900px; /* content inset — controls how far inward the page goes */
+    margin: 0 auto;
+    padding: 0 24px; /* inner gutter so text doesn't touch the content edge */
+}
+
+header.no-bar {
+    background: none;
+    color: #222;
+    padding: 2rem 0 0.5rem 0;
+    text-align: left;
+    box-shadow: none;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+    padding: 1.25rem 0; /* vertical padding only, horizontal spacing controlled by body padding */
+}
+
+.site-title h1 {
+    margin: 0;
+    font-size: 34px;
+    letter-spacing: -0.5px;
+}
+
+.site-title .subtitle {
+    margin: 0.25rem 0 0 0;
+    font-size: 0.95rem;
+    color: #000;
+}
+
+.top-nav {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.top-nav a {
+    color: #1976d2; /* keep nav links blue as hyperlinks */
+    text-decoration: none;
+    text-transform: lowercase;
+    font-size: 0.95rem;
+    opacity: 0.95;
+}
+
+.top-nav a:hover { text-decoration: underline; }
+
+.page-sep {
+    border: 0;
+    height: 1px;
+    background: #e6e6e6;
+    margin: 0.5rem 0 1.25rem 0; /* fill the .page-inner width */
+    width: 100%;
+}
+
+/* Explicit section rule fallback (used where pseudo-elements may be blocked or cached) */
+.section-hr {
+    border: 0;
+    height: 1px;
+    background: #e6e6e6;
+    margin: 0.5rem 0 1rem 0;
+    width: 100%;
+}
+
+.headshot {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px; /* square with small rounded corners */
+    border: 3px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* About two-column layout */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 48px;
+    align-items: center;
+    width: 100%;
+    margin: 0 0 2rem 0;
+}
+
+.about-text h2 {
+    font-size: 40px;
+    margin: 0 0 0.6rem 0;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: inherit;
+    max-width: 640px;
+}
+
+.about-photo { text-align: right; }
+
+.about-headshot {
+    /* responsive square: scale to container but never exceed 360px */
+    width: 100%;
+    max-width: 360px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 0;
+    display: block;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+nav {
+    margin-top: 0.5rem;
+}
+
+nav a {
+    color: #1976d2;
+    margin: 0 0.7rem;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #1565c0;
+    text-decoration: underline;
+}
+
+main {
+    width: 100%;
+    margin: 1.25rem 0 2rem 0;
+    background: transparent; /* removed white card */
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+section {
+    margin-bottom: 2.5rem;
+    padding: 0; /* rely on body padding for left/right margins */
+}
+
+h1 {
+    margin-bottom: 0.3rem;
+}
+
+h2 {
+    color: #000;
+    margin-bottom: 0.7rem;
+}
+
+/* Thin rule under specific section headings to match header separator */
+#projects h2::after,
+#skills h2::after,
+#achievements h2::after,
+#contact h2::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background: #e6e6e6;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.exp-list {
+    list-style: none;
+    padding: 0;
+}
+
+.exp-list > li {
+    margin-bottom: 1.5rem;
+    background: #f7faff;
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    box-shadow: 0 1px 4px rgba(25,118,210,0.04);
+}
+
+.exp-list strong {
+    color: #1565c0;
+    font-size: 1.08rem;
+}
+
+.exp-list ul {
+    margin: 0.5rem 0 0 1.2rem;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem 2rem;
+}
+
+.skills-list li {
+    background: #f4f4f4;
+    border-radius: 6px;
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+    .about-grid { grid-template-columns: 1fr; }
+    .about-photo { text-align: center; }
+    .about-headshot { width: 320px; height: 320px; margin: 0 auto; }
+    .top-nav { gap: 0.8rem; }
+}
+
+@media (max-width: 700px) {
+    .header-content { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+    main { padding: 0; }
+    .skills-list { grid-template-columns: 1fr; }
+    .about-headshot { width: 260px; height: 260px; }
+}
 
     /* Strong override for deployed environments where other CSS may interfere
        This forces the About headshot to stay square and not exceed 360px. */
