@@ -1,5 +1,4 @@
 @media (max-width: 700px) {
-    /* ...existing responsive styles... */
     /* Shrink 2025 robot images for mobile */
     .project img[src*="2025Robot1.png"],
     .project img[src*="2025Robot2.png"] {
@@ -12,9 +11,8 @@
     .project > div[style*="display: flex"] {
         max-width: 100% !important;
     }
-}
-/* Responsive layout improvements for mobile */
-@media (max-width: 700px) {
+
+    /* Responsive layout improvements for mobile */
     body {
         margin: 0;
         padding: 0;
@@ -25,62 +23,35 @@
         align-items: center;
         text-align: center;
     }
-    @media (max-width: 700px) {
-        /* ...existing responsive styles... */
-        /* Shrink 2025 robot images for mobile */
-        .project img[src*="2025Robot1.png"],
-        .project img[src*="2025Robot2.png"] {
-            height: 140px !important;
-            max-width: 48% !important;
-            width: auto !important;
-            object-fit: contain !important;
-            margin: 0 2px !important;
-        }
-        .project > div[style*="display: flex"] {
-            max-width: 100% !important;
-        }
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 12px;
     }
-    /* Responsive layout improvements for mobile */
-    @media (max-width: 700px) {
-        body {
-            margin: 0;
-            padding: 0;
-            font-size: 1em;
-        }
-        .header-content {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 12px;
-            margin-top: 12px;
-        }
-        main, section, .project, .exp-list, .skills-list, .achievements-list {
-            text-align: center !important;
-            margin-left: auto !important;
-            margin-right: auto !important;
-        }
-        .project img, .project iframe {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 100%;
-            height: auto;
-        }
-        .exp-list, .skills-list, .achievements-list {
-            padding-left: 0 !important;
-        }
-        .project > div[style*="display: flex"] {
-            flex-direction: column !important;
-            align-items: center !important;
-            gap: 12px !important;
-            max-width: 100% !important;
-        }
+    main, section, .project, .exp-list, .skills-list, .achievements-list {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
+    .project img, .project iframe {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        height: auto;
+    }
+    .exp-list, .skills-list, .achievements-list {
+        padding-left: 0 !important;
+    }
+    .project > div[style*="display: flex"] {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 12px !important;
+        max-width: 100% !important;
+    }
+}
     /* Ensure MREN203 project images keep aspect ratio and don't distort */
     .project img[src*="MREN203"] {
         width: 32% !important;
