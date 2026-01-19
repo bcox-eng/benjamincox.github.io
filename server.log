@@ -1,0 +1,17 @@
+127.0.0.1 - - [19/Jan/2026 04:38:55] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jan/2026 04:38:55] "GET /style.css HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jan/2026 04:38:55] "GET /resources/Square%20Benjamin%20Cox%20Head%20Shot.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jan/2026 04:38:55] "GET /resources/GearBoxAssemblyView.png HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jan/2026 04:38:55] "GET /resources/HyperloopGlobalPresent.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jan/2026 04:38:55] "GET /resources/HyperloopStructural.png HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jan/2026 04:38:55] "GET /resources/MREN203Trailer2.png HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jan/2026 04:38:55] "GET /resources/HyperloopThermal.png HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jan/2026 04:38:55] "GET /resources/MREN203.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jan/2026 04:38:55] "GET /resources/MREN203UI.png HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jan/2026 04:38:55] "GET /resources/Elevator1.png HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jan/2026 04:38:55] "GET /resources/Elevator2.png HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jan/2026 04:38:55] "GET /resources/LineFollowingRobot1.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jan/2026 04:38:55] "GET /resources/LineFollowingRobot2.png HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jan/2026 04:38:55] "GET /resources/LineFollowingRobot3.jpg HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jan/2026 04:38:56] "GET /gearbox.html HTTP/1.1" 200 -
+127.0.0.1 - - [19/Jan/2026 04:38:56] "GET /resources/GearBoxExplodedView.png HTTP/1.1" 200 -
