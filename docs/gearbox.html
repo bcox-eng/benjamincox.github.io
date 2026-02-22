@@ -6,6 +6,15 @@
     <title>GearBox - Benjamin Cox</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'light') {
+                document.documentElement.classList.add('light-mode');
+            }
+        })();
+    </script>
     <style>
         .detail-page-content {
             margin-top: 2rem;
@@ -23,12 +32,12 @@
         .detail-images img {
             max-width: 100%;
             border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px var(--shadow-color);
         }
         .back-link {
             display: inline-block;
             margin-bottom: 1rem;
-            color: #1976d2;
+            color: var(--link-color);
             text-decoration: none;
             font-weight: bold;
         }
@@ -49,6 +58,7 @@
                 <a href="index.html#projects">projects</a>
                 <a href="resume.html">resume</a>
                 <a href="index.html#contact">contact</a>
+                <button id="theme-toggle" aria-label="Toggle Dark Mode">☀️</button>
             </nav>
         </div>
         <hr class="page-sep">
