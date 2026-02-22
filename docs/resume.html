@@ -6,6 +6,15 @@
   <title>Benjamin Cox — Resume</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <script>
+    (function() {
+      const theme = localStorage.getItem('theme');
+      if (theme === 'light') {
+        document.documentElement.classList.add('light-mode');
+      }
+    })();
+  </script>
   <style>
     .resume-container { max-width: 900px; margin: 2rem auto; padding: 0 24px; height: 100vh; }
   </style>
@@ -22,6 +31,7 @@
           <a href="index.html">home</a>
           <a href="resume.html">resume</a>
           <a href="index.html#contact">contact</a>
+          <button id="theme-toggle" aria-label="Toggle Dark Mode">☀️</button>
         </nav>
       </div>
       <hr class="page-sep">
