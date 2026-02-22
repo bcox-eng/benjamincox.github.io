@@ -8,7 +8,7 @@
         object-fit: contain !important;
         margin: 0 2px !important;
     }
-    .project > div[style*="display: flex"] {
+    .project-images {
         max-width: 100% !important;
     }
 
@@ -45,7 +45,7 @@
     .exp-list, .skills-list, .achievements-list {
         padding-left: 0 !important;
     }
-    .project > div[style*="display: flex"] {
+    .project-images {
         flex-direction: column !important;
         align-items: center !important;
         gap: 12px !important;
@@ -315,6 +315,7 @@ h2 {
     .about-headshot { width: 260px; height: 260px; }
 }
 
+@media (min-width: 901px) {
     /* Strong override for deployed environments where other CSS may interfere
        This forces the About headshot to stay square and not exceed 360px. */
     .about-photo .about-headshot {
@@ -327,3 +328,24 @@ h2 {
         margin-left: auto !important; /* keep right-aligned inside .about-photo */
         margin-right: 0 !important;
     }
+}
+
+@media (max-width: 700px) {
+    .header-content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .project-images img, .project-images iframe, .project img[src*="MREN203"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        height: auto !important;
+    }
+
+    .project-images {
+         flex-direction: column !important;
+         align-items: center !important;
+    }
+}
