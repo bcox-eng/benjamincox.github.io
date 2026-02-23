@@ -29,4 +29,15 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('theme', theme);
         });
     }
+
+    const viewMoreBtn = document.getElementById('view-more-projects');
+    if (viewMoreBtn) {
+        viewMoreBtn.addEventListener('click', () => {
+            const hiddenProjects = document.querySelectorAll('.hidden-project');
+            hiddenProjects.forEach(project => {
+                project.classList.remove('hidden-project');
+            });
+            viewMoreBtn.parentElement.style.display = 'none';
+        });
+    }
 });
