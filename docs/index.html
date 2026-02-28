@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Benjamin Cox</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=5">
     <script src="script.js" defer></script>
     <script>
-        (function() {
+        (function () {
             const theme = localStorage.getItem('theme');
             if (theme === 'light') {
                 document.documentElement.classList.add('light-mode');
@@ -16,151 +17,232 @@
         })();
     </script>
 </head>
+
 <body>
     <div class="page-inner">
-    <header class="no-bar">
-        <div class="header-content">
-            <div class="site-title">
-                <h1>Benjamin Cox</h1>
-                <p class="subtitle">Mechatronics & Robotics Engineer</p>
-            </div>
-            <nav class="top-nav">
-                <a href="#projects">projects</a>
-                <a href="resume.html">resume</a>
-                <a href="#contact">contact</a>
-                <button id="theme-toggle" aria-label="Toggle Dark Mode">☀️</button>
-            </nav>
-        </div>
-        <hr class="page-sep">
-    </header>
-    <main>
-        <section id="about">
-            <div class="about-grid">
-                <div class="about-text">
-                    <h2>About me</h2>
-                    <p>For over a decade I’ve been fascinated with robotics. This led me to Mechatronics at Queen’s University, where I found lifelong friends and cultivated my skills in CAD, programming languages and embedded system development. I guide my work by one principle: volume. Do it enough times, refine it enough times, and success becomes inevitable.</p>
-
-                    <p style="margin-top:1.2rem;"><a href="resume.html">My resume</a></p>
-                    <p><a href="#contact">Contact me</a></p>
+        <header class="no-bar">
+            <div class="header-content">
+                <div class="site-title">
+                    <h1>Benjamin Cox</h1>
+                    <p class="subtitle">Mechatronics & Robotics Engineer</p>
                 </div>
-                <div class="about-photo">
-                    <img src="resources/Square Benjamin Cox Head Shot.jpg" alt="Benjamin Cox headshot" class="about-headshot">
-                </div>
+                <nav class="top-nav">
+                    <a href="#projects">projects</a>
+                    <a href="resume.html">resume</a>
+                    <a href="#contact">contact</a>
+                    <button id="theme-toggle" aria-label="Toggle Dark Mode">☀️</button>
+                </nav>
             </div>
-        </section>
-        <!-- Experience section removed per request -->
-        <section id="projects">
-            <h2>Projects</h2>
+            <hr class="page-sep">
+        </header>
+        <main>
+            <section id="about">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h2>About me</h2>
+                        <p>For over a decade I’ve been fascinated with robotics. This led me to Mechatronics at Queen’s
+                            University, where I found lifelong friends and cultivated my skills in CAD, programming
+                            languages and embedded system development. I guide my work by one principle: volume. Do it
+                            enough times, refine it enough times, and success becomes inevitable.</p>
 
-            <div class="project" style="margin-bottom: 48px;">
-                <h3>Automated Optical Inspection</h3>
-                <p>Designed an automated inspection system for 25mm parts using computer vision. The station detects sub-millimeter defects and automatically rejects any part that is outside the ±0.3mm tolerance.</p>
+                        <p style="margin-top:1.2rem;"><a href="resume.html">My resume</a></p>
+                        <p><a href="#contact">Contact me</a></p>
+                    </div>
+                    <div class="about-photo">
+                        <img src="resources/Square Benjamin Cox Head Shot.jpg" alt="Benjamin Cox headshot"
+                            class="about-headshot">
+                    </div>
+                </div>
+            </section>
+            <!-- Experience section removed per request -->
+            <section id="projects">
+                <h2>Projects</h2>
 
-                <div class="project-images" style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-top:1em; margin-bottom:1em;">
-                    <img src="resources/PartCheckProject/LaptopLightDiffuseSystem.jpg" alt="Automated Optical Inspection System" style="width:80%; max-width:500px; border-radius:8px;">
+                <div class="project">
+                    <h3>Automated Optical Inspection</h3>
+                    <div class="project-content">
+                        <div class="project-text">
+                            <p>Designed an automated inspection system for 25mm parts using computer vision. The station
+                                detects sub-millimeter defects and automatically rejects any part that is outside the
+                                ±0.3mm tolerance.</p>
+                            <p><a href="partcheck.html" class="btn-primary">Read More</a></p>
+                        </div>
+                        <div class="project-images"
+                           >
+                            <img src="resources/PartCheckProject/LaptopLightDiffuseSystem.jpg"
+                                alt="Automated Optical Inspection System"
+                                style="width:80%; max-width:500px; border-radius:8px;">
+                        </div>
+                    </div>
                 </div>
 
-                <p><a href="partcheck.html" class="btn-primary">Read More</a></p>
-            </div>
-
-            <div class="project" style="margin-bottom: 48px;">
-                <h3>High-Torque 20:1 Helical Gear Reduction Drive</h3>
-                <p>Designed and fabricated a custom two-stage reduction gearbox to convert high-speed DC motor input (10,000+ RPM) into high-torque output for robotic actuation. The project served as a targeted exercise to improve CAD modeling, Design for Manufacturing (DFM), and Geometric Dimensioning and Tolerancing (GD&T) skills.</p>
-                <p><a href="gearbox.html" class="btn-primary">Read More</a></p>
-
-                <div class="project-images" style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-top:1em;">
-                    <img src="resources/GearBoxNoLid.jpg" alt="High-Torque Gearbox" style="width:80%; max-width:500px; border-radius:8px;">
+                <div class="project">
+                    <h3>High-Torque 20:1 Helical Gear Reduction Drive</h3>
+                    <div class="project-content">
+                        <div class="project-text">
+                            <p>Designed and fabricated a custom two-stage reduction gearbox to convert high-speed DC
+                                motor input (10,000+ RPM) into high-torque output for robotic actuation. The project
+                                served as a targeted exercise to improve CAD modeling, Design for Manufacturing (DFM),
+                                and Geometric Dimensioning and Tolerancing (GD&T) skills.</p>
+                            <p><a href="gearbox.html" class="btn-primary">Read More</a></p>
+                        </div>
+                        <div class="project-images"
+                           >
+                            <img src="resources/GearBoxNoLid.jpg" alt="High-Torque Gearbox"
+                                style="width:80%; max-width:500px; border-radius:8px;">
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="project" style="margin-bottom: 48px;">
-                <h3>Emergency Hyperloop Landing Wheel – Smith Engineering Hyperloop</h3>
-                <p>Led a team of 4 to design a vacuum-compliant, composite emergency landing wheel for a 20-tonne MagLev vehicle operating at high speed in a low-pressure tube. The design needed to survive high impact loads and provide substantial braking capability.</p>
-                <p>Designed a two-layer wheel using Inconel 600 and Aluminum 7075-T6 and performed structural and thermal analysis in SimScale to validate strength and thermal performance. Wrote Python scripts to determine optimal wheel diameter and mounting angle.</p>
-                <p>Presented at Hyperloop Global 2025 and won 1st place.</p>
-                    
-                
-                <div class="project-images" style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-top:1em;">
-                    <img src="resources/HyperloopGlobalPresent.jpg" alt="Hyperloop presentation" style="width:32%; max-width:320px; border-radius:8px;">
-                    <img src="resources/HyperloopStructural.png" alt="Hyperloop structural analysis" style="width:32%; max-width:320px; border-radius:8px;">
-                    <img src="resources/HyperloopThermal.png" alt="Hyperloop thermal analysis" style="width:32%; max-width:320px; border-radius:8px;">
+                <div class="project">
+                    <h3>Emergency Hyperloop Landing Wheel – Smith Engineering Hyperloop</h3>
+                    <div class="project-content">
+                        <div class="project-text">
+                            <p>Led a team of 4 to design a vacuum-compliant, composite emergency landing wheel for a
+                                20-tonne MagLev vehicle operating at high speed in a low-pressure tube. The design
+                                needed to survive high impact loads and provide substantial braking capability.</p>
+                            <p>Designed a two-layer wheel using Inconel 600 and Aluminum 7075-T6 and performed
+                                structural and thermal analysis in SimScale to validate strength and thermal
+                                performance. Wrote Python scripts to determine optimal wheel diameter and mounting
+                                angle.</p>
+                            <p>Presented at Hyperloop Global 2025 and won 1st place.</p>
+                        </div>
+                        <div class="project-images"
+                           >
+                            <img src="resources/HyperloopGlobalPresent.jpg" alt="Hyperloop presentation"
+                                style="width:100%; max-width:500px; border-radius:8px;">
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="project hidden-project" style="margin-bottom: 48px;">
-                <h3>Autonomous Delivery Robot – Mechatronics and Robotics Design II</h3>
-                <p>Collaborated with a team of 4 to design an autonomous delivery robot with a 2‑point hitch trailer for use in hospitals. The system navigates pre‑mapped indoor paths, avoids obstacles, and maintains localization despite wheel slip.</p>
-                <p>Implemented a weighted undirected graph in C++ with Dijkstra's algorithm for shortest‑path navigation, prototyped encoder‑based localization, designed a caster‑wheeled trailer in Onshape, and built a wireless prototype interface using Arduino WiFiNINA and a web UI.</p>
-                <ul>
-                    <li>Achieved functional navigation and localization subsystems and a working wireless prototype interface.</li>
+                <div class="project hidden-project">
+                    <h3>Autonomous Delivery Robot – Mechatronics and Robotics Design II</h3>
+                    <div class="project-content">
+                        <div class="project-text">
+                            <p>Collaborated with a team of 4 to design an autonomous delivery robot with a 2‑point hitch
+                                trailer
+                                for use in hospitals. The system navigates pre‑mapped indoor paths, avoids obstacles,
+                                and
+                                maintains localization despite wheel slip.</p>
+                            <p>Implemented a weighted undirected graph in C++ with Dijkstra's algorithm for
+                                shortest‑path
+                                navigation, prototyped encoder‑based localization, designed a caster‑wheeled trailer in
+                                Onshape,
+                                and built a wireless prototype interface using Arduino WiFiNINA and a web UI.</p>
+                            <ul>
+                                <li>Achieved functional navigation and localization subsystems and a working wireless
+                                    prototype
+                                    interface.</li>
+                            </ul>
+                        </div>
+                        <div class="project-images"
+                           >
+                            <img src="resources/MREN203.jpg" alt="Autonomous delivery robot"
+                                style="width:32%; max-width:320px; border-radius:8px;">
+                            <img src="resources/MREN203Trailer2.png" alt="Delivery robot trailer CAD"
+                                style="width:32%; max-width:320px; border-radius:8px;">
+                            <img src="resources/MREN203UI.png" alt="Delivery robot web UI"
+                                style="width:32%; max-width:320px; border-radius:8px;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project hidden-project">
+                    <h3>Functional Model Elevator – Data Structures and Algorithms</h3>
+                    <div class="project-content">
+                        <div class="project-text">
+                            <p>Designed, built, and programmed a functional model elevator that leverages data
+                                structures to
+                                efficiently manage user requests for pick-ups and drop-offs.</p>
+                            <p>Implemented two doubly linked lists to track active elevator requests and a separate node
+                                for
+                                priority users, optimizing efficiency in request handling. Designed the model elevator
+                                using
+                                Onshape. Developed the hardware system including a 1-inch LCD display, a motor driver to
+                                control
+                                elevator movement, and a magnetic encoder to accurately track the elevator's position.
+                            </p>
+                            <ul>
+                                <li>All implemented data structures and algorithms functioned as expected for Call,
+                                    Delete Call,
+                                    and Priority Requests.</li>
+                                <li>Mechanical components performed reliably: functional floor buttons, priority button,
+                                    and
+                                    smooth door operation.</li>
+                            </ul>
+                        </div>
+                        <div class="project-images"
+                           >
+                            <img src="resources/Elevator1.png" alt="Functional Model Elevator 1"
+                                style="width:48%; max-width:360px; border-radius:8px;">
+                            <img src="resources/Elevator2.png" alt="Functional Model Elevator 2"
+                                style="width:48%; max-width:360px; border-radius:8px;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project hidden-project">
+                    <h3>Line Following Robot – Mechatronics and Robotics Design I</h3>
+                    <div class="project-content">
+                        <div class="project-text">
+                            <p>Programmed a MiniBot to follow a black line and pick up blocks using an IR sensor. The
+                                goal was
+                                to have the MiniBot follow the line in a circle and pick up blocks three times with a
+                                minimum of
+                                5 per time.</p>
+                            <p>Calibrated sensor voltage readings for line detection and coded Arduino control to adjust
+                                wheel
+                                speeds to stay on the line. Used an optimized block layout to maximize pickups per run.
+                            </p>
+                            <p>One of two groups to pick up all 50 blocks, creating a tie for first.</p>
+                        </div>
+                        <div class="project-images"
+                           >
+                            <img src="resources/LineFollowingRobot1.jpg" alt="Line Following Robot 1"
+                                style="width:32%; max-width:240px; border-radius:8px;">
+                            <img src="resources/LineFollowingRobot2.png" alt="Line Following Robot 2"
+                                style="width:32%; max-width:240px; border-radius:8px;">
+                            <img src="resources/LineFollowingRobot3.jpg" alt="Line Following Robot 3"
+                                style="width:32%; max-width:240px; border-radius:8px;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="view-more-container">
+                    <button id="view-more-projects" class="btn-primary">View More Projects</button>
+                </div>
+
+            </section>
+
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul class="skills-list">
+                    <li><strong>Design: </strong>SolidWorks, Onshape, SimScale, LTSpice</li>
+                    <li><strong>Programming: </strong>Python, C, C++, HTML, MATLAB, Git, VHDL, Assembly</li>
+                    <li><strong>Hardware: </strong>Soldering, Circuit Analysis</li>
+                    <li><strong>Productivity: </strong>Word, PowerPoint, Excel, Figma, LaTeX</li>
+                    <li><strong>Languages: </strong>French (Fluent), English (Fluent)</li>
                 </ul>
-                <div class="project-images" style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-top:1em;">
-                    <img src="resources/MREN203.jpg" alt="Autonomous delivery robot" style="width:32%; max-width:320px; border-radius:8px;">
-                    <img src="resources/MREN203Trailer2.png" alt="Delivery robot trailer CAD" style="width:32%; max-width:320px; border-radius:8px;">
-                    <img src="resources/MREN203UI.png" alt="Delivery robot web UI" style="width:32%; max-width:320px; border-radius:8px;">
-                </div>
-            </div>
+            </section>
 
-            <div class="project hidden-project" style="margin-bottom: 48px;">
-                <h3>Functional Model Elevator – Data Structures and Algorithms</h3>
-                <p>Designed, built, and programmed a functional model elevator that leverages data structures to efficiently manage user requests for pick-ups and drop-offs.</p>
-                <p>Implemented two doubly linked lists to track active elevator requests and a separate node for priority users, optimizing efficiency in request handling. Designed the model elevator using Onshape. Developed the hardware system including a 1-inch LCD display, a motor driver to control elevator movement, and a magnetic encoder to accurately track the elevator's position.</p>
-                <ul>
-                    <li>All implemented data structures and algorithms functioned as expected for Call, Delete Call, and Priority Requests.</li>
-                    <li>Mechanical components performed reliably: functional floor buttons, priority button, and smooth door operation.</li>
+            <section id="achievements">
+                <h2>Achievements &amp; Awards</h2>
+                <ul class="achievements-list">
+                    <li><strong>Dean's Scholar Distinction</strong> – Academic recognition at Queen's University.</li>
+                    <li><strong>Canada Summer Games</strong> - Qualified and competed in Sailing for Manitoba</li>
+                    <li><strong>Award of Merit</strong> - Given by Sport Manitoba</li>
+                    <!-- Add more achievements or competition awards here if desired -->
                 </ul>
-                <div class="project-images" style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-top:1em;">
-                    <img src="resources/Elevator1.png" alt="Functional Model Elevator 1" style="width:48%; max-width:360px; border-radius:8px;">
-                    <img src="resources/Elevator2.png" alt="Functional Model Elevator 2" style="width:48%; max-width:360px; border-radius:8px;">
-                </div>
-            </div>
-
-            <div class="project hidden-project" style="margin-bottom: 48px;">
-                <h3>Line Following Robot – Mechatronics and Robotics Design I</h3>
-                <p>Programmed a MiniBot to follow a black line and pick up blocks using an IR sensor. The goal was to have the MiniBot follow the line in a circle and pick up blocks three times with a minimum of 5 per time.</p>
-                <p>Calibrated sensor voltage readings for line detection and coded Arduino control to adjust wheel speeds to stay on the line. Used an optimized block layout to maximize pickups per run.</p>
-                <p>One of two groups to pick up all 50 blocks, creating a tie for first.</p>
-                
-                <div class="project-images" style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-top:1em;">
-                    <img src="resources/LineFollowingRobot1.jpg" alt="Line Following Robot 1" style="width:32%; max-width:240px; border-radius:8px;">
-                    <img src="resources/LineFollowingRobot2.png" alt="Line Following Robot 2" style="width:32%; max-width:240px; border-radius:8px;">
-                    <img src="resources/LineFollowingRobot3.jpg" alt="Line Following Robot 3" style="width:32%; max-width:240px; border-radius:8px;">
-                </div>
-            </div>
-
-            <div class="view-more-container">
-                <button id="view-more-projects" class="btn-primary">View More Projects</button>
-            </div>
-
-        </section>
-
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul class="skills-list">
-                <li><strong>Design: </strong>SolidWorks, Onshape, SimScale, LTSpice</li>
-                <li><strong>Programming: </strong>Python, C, C++, HTML, MATLAB, Git, VHDL, Assembly</li>
-                <li><strong>Hardware: </strong>Soldering, Circuit Analysis</li>
-                <li><strong>Productivity: </strong>Word, PowerPoint, Excel, Figma, LaTeX</li>
-                <li><strong>Languages: </strong>French (Fluent), English (Fluent)</li>
-            </ul>
-        </section>
-        
-        <section id="achievements">
-            <h2>Achievements &amp; Awards</h2>
-            <ul class="achievements-list">
-                <li><strong>Dean's Scholar Distinction</strong> – Academic recognition at Queen's University.</li>
-                <li><strong>Canada Summer Games</strong> - Qualified and competed in Sailing for Manitoba</li>
-                <li><strong>Award of Merit</strong> - Given by Sport Manitoba</li>
-                <!-- Add more achievements or competition awards here if desired -->
-            </ul>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:Benjamin.Cox@queensu.ca">Benjamin.Cox@queensu.ca</a></p>
-            <p>Phone: (204) 892-2100</p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/bcox-eng" target="_blank" rel="noopener noreferrer">linkedin.com/in/bcox-eng</a></p>
-        </section>
-    </main>
+            </section>
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>Email: <a href="mailto:Benjamin.Cox@queensu.ca">Benjamin.Cox@queensu.ca</a></p>
+                <p>Phone: (204) 892-2100</p>
+                <p>LinkedIn: <a href="https://linkedin.com/in/bcox-eng" target="_blank"
+                        rel="noopener noreferrer">linkedin.com/in/bcox-eng</a></p>
+            </section>
+        </main>
     </div>
 </body>
+
 </html>

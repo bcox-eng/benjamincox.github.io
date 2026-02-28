@@ -1,38 +1,41 @@
 :root {
-    /* Dark Mode (Default) */
-    --bg-color: #121212;
-    --text-color: #e0e0e0;
-    --heading-color: #ffffff;
-    --subtitle-color: #b0b0b0;
-    --link-color: #64b5f6;
-    --link-hover-color: #90caf9;
-    --nav-link-color: #64b5f6;
-    --border-color: #333333;
-    --card-bg-color: #1e1e1e;
-    --button-bg: #1976d2;
+    /* Dark Mode (Default) - Premium */
+    --bg-color: #0b0f19;
+    --text-color: #94a3b8;
+    --heading-color: #f8fafc;
+    --subtitle-color: #64748b;
+    --link-color: #38bdf8;
+    --link-hover-color: #7dd3fc;
+    --nav-link-color: #e2e8f0;
+    --border-color: rgba(255, 255, 255, 0.08);
+    --card-bg-color: rgba(30, 41, 59, 0.4);
+    --button-bg: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
     --button-text: #ffffff;
-    --headshot-border: #333333;
-    --shadow-color: rgba(255,255,255,0.05);
+    --headshot-border: rgba(255, 255, 255, 0.1);
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --glass-border: rgba(255, 255, 255, 0.05);
 }
 
 .light-mode {
-    /* Light Mode (Original) */
-    --bg-color: #f4f4f4;
-    --text-color: #000000;
-    --heading-color: #222222;
-    --subtitle-color: #555555;
-    --link-color: #1976d2;
-    --link-hover-color: #1565c0;
-    --nav-link-color: #1976d2;
-    --border-color: #e6e6e6;
-    --card-bg-color: #f7faff;
-    --button-bg: #1976d2;
+    /* Light Mode - Premium */
+    --bg-color: #f8fafc;
+    --text-color: #475569;
+    --heading-color: #0f172a;
+    --subtitle-color: #64748b;
+    --link-color: #2563eb;
+    --link-hover-color: #1d4ed8;
+    --nav-link-color: #334155;
+    --border-color: rgba(15, 23, 42, 0.08);
+    --card-bg-color: rgba(255, 255, 255, 0.7);
+    --button-bg: linear-gradient(135deg, #2563eb 0%, #0891b2 100%);
     --button-text: #ffffff;
-    --headshot-border: #e0e0e0;
-    --shadow-color: rgba(0,0,0,0.08);
+    --headshot-border: rgba(15, 23, 42, 0.05);
+    --shadow-color: rgba(15, 23, 42, 0.08);
+    --glass-border: rgba(255, 255, 255, 0.5);
 }
 
 @media (max-width: 700px) {
+
     /* Shrink 2025 robot images for mobile */
     .project img[src*="2025Robot1.png"],
     .project img[src*="2025Robot2.png"] {
@@ -42,6 +45,7 @@
         object-fit: contain !important;
         margin: 0 2px !important;
     }
+
     .project-images {
         max-width: 100% !important;
     }
@@ -52,11 +56,13 @@
         padding: 0;
         font-size: 1em;
     }
+
     .header-content {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
+
     nav {
         display: flex;
         flex-wrap: wrap;
@@ -64,21 +70,33 @@
         gap: 12px;
         margin-top: 12px;
     }
-    main, section, .project, .exp-list, .skills-list, .achievements-list {
+
+    main,
+    section,
+    .project,
+    .exp-list,
+    .skills-list,
+    .achievements-list {
         text-align: center !important;
         margin-left: auto !important;
         margin-right: auto !important;
     }
-    .project img, .project iframe {
+
+    .project img,
+    .project iframe {
         display: block;
         margin-left: auto;
         margin-right: auto;
         max-width: 100%;
         height: auto;
     }
-    .exp-list, .skills-list, .achievements-list {
+
+    .exp-list,
+    .skills-list,
+    .achievements-list {
         padding-left: 0 !important;
     }
+
     .project-images {
         flex-direction: column !important;
         align-items: center !important;
@@ -110,7 +128,25 @@
     margin-top: 1rem;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 2px 12px rgba(25,118,210,0.08);
+    box-shadow: 0 2px 12px rgba(25, 118, 210, 0.08);
+}
+
+.project {
+    margin-bottom: 48px;
+    background: var(--card-bg-color);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 4px 24px var(--shadow-color);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 48px var(--shadow-color);
+    border-color: rgba(255, 255, 255, 0.15);
 }
 
 .project h3 {
@@ -118,27 +154,72 @@
     color: var(--heading-color);
 }
 
+.project-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.project-text {
+    flex: 1.05;
+    min-width: 0;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.project-images {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1em;
+}
+
+@media (max-width: 700px) {
+    .project-content {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
 body {
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
     margin: 0;
-    padding: 0; /* page horizontal padding moved into .page-inner */
+    padding: 0;
+    /* page horizontal padding moved into .page-inner */
     background: var(--bg-color);
-    color: var(--text-color); /* make default text black */
+    color: var(--text-color);
+    /* make default text black */
     transition: background 0.3s, color 0.3s;
+    line-height: 1.6;
 }
 
 .page-inner {
-    max-width: 900px; /* content inset — controls how far inward the page goes */
+    max-width: 900px;
+    /* content inset — controls how far inward the page goes */
     margin: 0 auto;
-    padding: 0 24px; /* inner gutter so text doesn't touch the content edge */
+    padding: 0 24px;
+    /* inner gutter so text doesn't touch the content edge */
 }
 
 header.no-bar {
-    background: none;
+    background: var(--card-bg-color);
     color: var(--heading-color);
-    padding: 2rem 0 0.5rem 0;
+    padding: 0.5rem 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     text-align: left;
-    box-shadow: none;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    position: sticky;
+    top: 12px;
+    z-index: 1000;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
 }
 
 .header-content {
@@ -147,7 +228,7 @@ header.no-bar {
     justify-content: space-between;
     gap: 2rem;
     width: 100%;
-    padding: 1.25rem 0; /* vertical padding only, horizontal spacing controlled by body padding */
+    padding: 0.5rem 0;
 }
 
 .site-title h1 {
@@ -157,9 +238,7 @@ header.no-bar {
 }
 
 .site-title .subtitle {
-    margin: 0.25rem 0 0 0;
-    font-size: 0.95rem;
-    color: var(--text-color); /* originally #000 */
+    display: none;
 }
 
 .top-nav {
@@ -169,20 +248,29 @@ header.no-bar {
 }
 
 .top-nav a {
-    color: var(--nav-link-color); /* keep nav links blue as hyperlinks */
+    color: var(--nav-link-color);
+    /* keep nav links blue as hyperlinks */
     text-decoration: none;
     text-transform: lowercase;
     font-size: 0.95rem;
     opacity: 0.95;
 }
 
-.top-nav a:hover { text-decoration: underline; }
+.top-nav a:hover {
+    text-decoration: underline;
+}
 
 .page-sep {
+    display: none;
+}
+
+/* Explicit section rule fallback (used where pseudo-elements may be blocked or cached) */
+.section-hr {
     border: 0;
     height: 1px;
     background: var(--border-color);
-    margin: 0.5rem 0 1.25rem 0; /* fill the .page-inner width */
+    margin: 0.5rem 0 1.25rem 0;
+    /* fill the .page-inner width */
     width: 100%;
 }
 
@@ -199,7 +287,8 @@ header.no-bar {
     width: 120px;
     height: 120px;
     object-fit: cover;
-    border-radius: 8px; /* square with small rounded corners */
+    border-radius: 8px;
+    /* square with small rounded corners */
     border: 3px solid var(--headshot-border);
     box-shadow: 0 2px 8px var(--shadow-color);
 }
@@ -226,7 +315,9 @@ header.no-bar {
     max-width: 640px;
 }
 
-.about-photo { text-align: right; }
+.about-photo {
+    text-align: right;
+}
 
 .about-headshot {
     /* responsive square: smaller size, scale to container but never exceed 200px */
@@ -265,7 +356,8 @@ nav a:hover {
 main {
     width: 100%;
     margin: 1.25rem 0 2rem 0;
-    background: transparent; /* removed white card */
+    background: transparent;
+    /* removed white card */
     padding: 0;
     border-radius: 0;
     box-shadow: none;
@@ -273,7 +365,8 @@ main {
 
 section {
     margin-bottom: 2.5rem;
-    padding: 0; /* rely on body padding for left/right margins */
+    padding: 0;
+    /* rely on body padding for left/right margins */
 }
 
 h1 {
@@ -304,16 +397,18 @@ h2 {
     padding: 0;
 }
 
-.exp-list > li {
+.exp-list>li {
     margin-bottom: 1.5rem;
     background: var(--card-bg-color);
     border-radius: 8px;
     padding: 1rem 1.2rem;
-    box-shadow: 0 1px 4px rgba(25,118,210,0.04); /* Keep minimal shadow? or use var */
+    box-shadow: 0 1px 4px rgba(25, 118, 210, 0.04);
+    /* Keep minimal shadow? or use var */
 }
 
 .exp-list strong {
-    color: var(--link-color); /* originally #1565c0, mapping to link color for better contrast in dark */
+    color: var(--link-color);
+    /* originally #1565c0, mapping to link color for better contrast in dark */
     font-size: 1.08rem;
 }
 
@@ -330,7 +425,8 @@ h2 {
 }
 
 .skills-list li {
-    background: var(--bg-color); /* originally red which was body bg */
+    background: var(--bg-color);
+    /* originally red which was body bg */
     border-radius: 6px;
     padding: 0.7rem 1rem;
     font-size: 1rem;
@@ -346,24 +442,53 @@ h2 {
        So they were invisible boxes? That's weird. Maybe for padding?
        Let's keep it as var(--bg-color) to match original.
     */
-    border: 1px solid var(--border-color); /* Add a border to make them visible */
+    border: 1px solid var(--border-color);
+    /* Add a border to make them visible */
 }
 
 @media (max-width: 900px) {
-    .about-grid { grid-template-columns: 1fr; }
-    .about-photo { text-align: center; }
-    .about-headshot { width: 320px; height: 320px; margin: 0 auto; }
-    .top-nav { gap: 0.8rem; }
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-photo {
+        text-align: center;
+    }
+
+    .about-headshot {
+        width: 320px;
+        height: 320px;
+        margin: 0 auto;
+    }
+
+    .top-nav {
+        gap: 0.8rem;
+    }
 }
 
 @media (max-width: 700px) {
-    .header-content { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
-    main { padding: 0; }
-    .skills-list { grid-template-columns: 1fr; }
-    .about-headshot { width: 260px; height: 260px; }
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    main {
+        padding: 0;
+    }
+
+    .skills-list {
+        grid-template-columns: 1fr;
+    }
+
+    .about-headshot {
+        width: 260px;
+        height: 260px;
+    }
 }
 
 @media (min-width: 901px) {
+
     /* Strong override for deployed environments where other CSS may interfere
        This forces the About headshot to stay square and not exceed 360px. */
     .about-photo .about-headshot {
@@ -373,7 +498,8 @@ h2 {
         height: auto !important;
         object-fit: cover !important;
         display: block !important;
-        margin-left: auto !important; /* keep right-aligned inside .about-photo */
+        margin-left: auto !important;
+        /* keep right-aligned inside .about-photo */
         margin-right: 0 !important;
     }
 }
@@ -384,7 +510,9 @@ h2 {
         text-align: center;
     }
 
-    .project-images img, .project-images iframe, .project img[src*="MREN203"] {
+    .project-images img,
+    .project-images iframe,
+    .project img[src*="MREN203"] {
         width: 100% !important;
         max-width: 100% !important;
         margin-left: auto !important;
@@ -393,8 +521,8 @@ h2 {
     }
 
     .project-images {
-         flex-direction: column !important;
-         align-items: center !important;
+        flex-direction: column !important;
+        align-items: center !important;
     }
 }
 
@@ -403,15 +531,20 @@ h2 {
     display: inline-block;
     background: var(--button-bg);
     color: var(--button-text);
-    padding: 8px 16px;
-    border-radius: 4px;
+    padding: 10px 24px;
+    border-radius: 8px;
     text-decoration: none;
     margin-top: 8px;
-    transition: opacity 0.3s;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: none;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary:hover {
-    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Theme Toggle Button */
@@ -435,4 +568,20 @@ h2 {
 .view-more-container {
     text-align: center;
     margin-top: 2rem;
+}
+
+/* Scroll Animations */
+.project.animation-ready {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.project.animation-ready.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project.animation-ready.visible:hover {
+    transform: translateY(-4px);
 }
